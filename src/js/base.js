@@ -51,3 +51,17 @@ function onClickedNavigationButton(element) {
     navigation.classList.add("fadeIn");
   }
 }
+
+function textSplitAnimation() {
+  const textContainer = document.querySelector('.splitTextAnimation');
+  const textContent = textContainer.textContent;
+  textContainer.textContent = ''; // 一度テキストを空にする
+  textContent.split('').forEach((char, index) => {
+    const span = document.createElement('span');
+    // 空白文字が消えないように処理
+    span.textContent = char === ' ' ? '\u00A0' : char; 
+    span.style.animationDelay = `${index * 0.08}s`; 
+    textContainer.appendChild(span);
+  });
+}
+textSplitAnimation();
