@@ -11,7 +11,7 @@ xcopy %FROM% %TO% /e /y
 
 pushd %TO%
 git add .
-git commit -m "デプロイ"
+git commit -m "deploy"
 git push
 popd
 endlocal
