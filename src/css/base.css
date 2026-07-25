@@ -169,15 +169,15 @@ footer .content a img {
 .splitTextAnimation.is-animated span {
   animation-delay: calc(var(--delay) * 0.02s); 
   animation-name: fadeInChar;
-  animation-duration: 1.0s;
-  animation-timing-function: ease;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
 
 @keyframes fadeInChar {
   from  {
     opacity: 0;
-    transform: translateY(80px);
+    transform: translateY(20px);
   }
 
   to {
@@ -497,7 +497,7 @@ summary::-webkit-details-marker {
     width: 100%;
     height: 100%;
   }
-  
+
   /* トップメッセージ */
   .topMessage{
     font-size: clamp(12px, 2.5vw, 99px);
