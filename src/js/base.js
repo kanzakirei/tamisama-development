@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 window.onload = function () {
   document.getElementById("loading").classList.toggle("fadeOut");
   document.documentElement.style.overflow = "visible";
-  playSplitTextAnimation();
+  playAnimation();
 }
 
 // デバッグ用
@@ -33,6 +33,22 @@ function request(_endPoint, _json, _onSuccessed = null, _onErrored = null) {
     .catch(error => {
       if (_onErrored != null) _onErrored(error);
     });
+}
+
+function playAnimation() {
+  const targets = document.querySelectorAll(".playAnimation");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-animated'); 
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    rootMargin: "0px 0px -10% 0px"
+  });
+
+  targets.forEach((target) => observer.observe(target));
 }
 
 function onClickedContactButton() {
@@ -85,20 +101,4 @@ function setupSplitTextAnimation() {
       target.appendChild(span);
     });
   });
-}
-
-function playSplitTextAnimation() {
-  const targets = document.querySelectorAll(".splitTextAnimation");
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-animated'); 
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    rootMargin: "0px 0px -10% 0px"
-  });
-
-  targets.forEach((target) => observer.observe(target));
 }

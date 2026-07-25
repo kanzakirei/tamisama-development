@@ -109,6 +109,31 @@ footer .content a img {
   width: 90%;
 }
 
+/* ロード画面 */
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #f49fe3;
+  text-align: center;
+  color: white;
+  visibility: visible;
+  opacity: 1;
+}
+
+#loadingLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#loadingLogo img {
+  width: 80%;
+  height: auto;
+}
+
 .fadeIn {
   animation: fadeInAnime .3s ease 0s 1 normal forwards;
 }
@@ -160,7 +185,7 @@ footer .content a img {
   }
 }
 
-/* 各文字のアニメーション */
+/* 文字のアニメーション */
 .splitTextAnimation span {
   display: inline-block;
   opacity: 0;
@@ -168,16 +193,64 @@ footer .content a img {
 
 .splitTextAnimation.is-animated span {
   animation-delay: calc(var(--delay) * 0.02s); 
-  animation-name: fadeInChar;
+  animation-name: splitTextfadeUpKeyframes;
   animation-duration: 0.4s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
 
-@keyframes fadeInChar {
+.topMessage .splitTextAnimation.is-animated span {
+  animation-delay: calc(1.2s + (var(--delay) * 0.02s)); 
+}
+
+@keyframes splitTextfadeUpKeyframes {
   from  {
     opacity: 0;
     transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 画像のアニメーション */
+.imageAnimation {
+  opacity: 0;
+}
+
+.imageAnimation.is-animated {
+  animation-name: imageFadeUpkeyframes;
+  animation-duration: 1.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.topCharacter .imageAnimation.is-animated {
+  animation-delay: 0.1s; 
+  animation-name: imageFadeLeftkeyframes;
+  animation-duration: 1.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes imageFadeLeftkeyframes {
+  from  {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes imageFadeUpkeyframes {
+  from  {
+    opacity: 0;
+    transform: translateY(50px);
   }
 
   to {
@@ -280,31 +353,6 @@ summary {
 
 summary::-webkit-details-marker {
   display: none;
-}
-
-/* ロード画面 */
-#loading {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  background: #333;
-  text-align: center;
-  color: white;
-  visibility: visible;
-  opacity: 1;
-}
-
-#loadingLogo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#loadingLogo img {
-  width: 80%;
-  height: auto;
 }
 
 /* ネオンテキスト */
