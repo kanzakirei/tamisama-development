@@ -1,6 +1,6 @@
 @eshi off
 
-set /P MESSAGE="ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ï¼š"
+set /P MESSAGE="ƒƒbƒZ[ƒW‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢F"
 git add .
 git commit -m "%MESSAGE%"
 git push
