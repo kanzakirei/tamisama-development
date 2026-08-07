@@ -93,6 +93,12 @@ div.left {
   z-index: 1;
 }
 
+.content img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 footer .content img {
   max-width: 400px;
   width: 100%;
@@ -105,8 +111,16 @@ footer .content a img {
 }
 
 .profile {
+  position: relative;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
+  display: inline-block;
+}
+
+.profile img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 /* ロード画面 */
@@ -235,7 +249,10 @@ footer .content a img {
   animation-fill-mode: forwards;
 }
 
-.topVideo .imageAnimation.is-animated {
+.topVideo .imageAnimation.is-animated,
+.topIcon1 .imageAnimation.is-animated,
+.topIcon2 .imageAnimation.is-animated, 
+.topIcon3 .imageAnimation.is-animated {
   animation-delay: 3.0s; 
 }
 
@@ -406,40 +423,49 @@ summary::-webkit-details-marker {
     visibility: hidden;
   }
 
-  /* プロフィール */
-  .profilePanel {
-    position: relative;
-    display: inline-block;
-    width: 50%;
-  }
-
-  .profilePanel img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-
   /* トップキャラクター */
   .topCharacter{
-    margin-left: 80%;
-    width: 100%;
+    margin-left: 40%;
+    width: 50%;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 97%, rgba(0, 0, 0, 0) 100%);
   }
 
   /* トップメッセージ */
   .topMessage{
     position: absolute;
-    width: 100%;
+    width: 50%;
     left: 10%;
     top: 30%;
     font-size: clamp(12px, 2.5vw, 99px);
     transform: rotate(-15deg);
   }
 
+  /* トップアイコン */
+  .topIcon1{
+    position: absolute;
+    left: 20%;
+    top: 15%;
+    width: 6%;
+  }
+  
+  .topIcon2{
+    position: absolute;
+    left: 40%;
+    top: 80%;
+    width: 6%;
+  }
+
+  .topIcon3{
+    position: absolute;
+    left: 85%;
+    top: 35%;
+    width: 6%;
+  }
+
   /* トップビデオ */
   .topVideo{
     position: absolute;
-    width: 100%;
+    width: 50%;
     left: -3%;
     top: 51%;
     aspect-ratio: 16 / 9;
@@ -539,20 +565,22 @@ summary::-webkit-details-marker {
     width: 40%;
   }
 
-  /* プロフィール */
-  .profile {
-    max-width: 600px;
-  }
-
-  .profilePanel img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-
   /* トップメッセージ */
   .topMessage{
     font-size: clamp(12px, 2.5vw, 99px);
+  }
+
+  /* トップアイコン */
+  .topIcon1{
+    display: none;
+  }
+
+  .topIcon2{
+    display: none;
+  }
+
+  .topIcon3{
+    display: none;
   }
 
   /* トップビデオ */
