@@ -199,6 +199,44 @@ footer .content a img {
   }
 }
 
+/* 水平にふわふわ */
+.flyAnimationX {
+  animation-name: floating-x;
+  animation-duration: 3.2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: calc(var(--delay) * 2.5s); 
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes floating-x {
+  0% {
+    transform: translateX(-7%) rotate(-3deg);
+  }
+  100% {
+    transform: translateX(7) rotate(3deg);
+  }
+}
+
+/* 垂直にふわふわ */
+.flyAnimationY {
+  animation-name: floating-y;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: calc(var(--delay) * 1.0s); 
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes floating-y {
+  0% {
+    transform: translateY(-7%) rotate(-3deg);
+  }
+  100% {
+    transform: translateY(7%) rotate(3deg);
+  }
+}
+
 /* 文字のアニメーション */
 .splitTextAnimation span {
   display: inline-block;
@@ -206,15 +244,15 @@ footer .content a img {
 }
 
 .splitTextAnimation.is-animated span {
-  animation-delay: calc(var(--delay) * 0.02s); 
   animation-name: splitTextfadeUpKeyframes;
   animation-duration: 0.4s;
   animation-timing-function: ease-out;
+  animation-delay: calc(var(--delay) * 0.02s); 
   animation-fill-mode: forwards;
 }
 
 .topMessage .splitTextAnimation.is-animated span {
-  animation-delay: calc(1.2s + (var(--delay) * 0.02s)); 
+  animation-delay: calc(0.5s + (var(--delay) * 0.02s)); 
 }
 
 @keyframes splitTextfadeUpKeyframes {
@@ -226,6 +264,36 @@ footer .content a img {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* ポップアップ */
+.popUpAnimation {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.popUpAnimation.is-animated {
+  animation-name: popIn;
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-fill-mode: forwards;
+}
+
+.topIcon1 .popUpAnimation.is-animated,
+.topIcon2 .popUpAnimation.is-animated, 
+.topIcon3 .popUpAnimation.is-animated {
+  animation-delay: 2.0s; 
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -241,7 +309,7 @@ footer .content a img {
   animation-fill-mode: forwards;
 }
 
-.topCharacter .imageAnimation.is-animated {
+.topCharacter.imageAnimation.is-animated {
   animation-delay: 0.1s; 
   animation-name: imageFadeLeftkeyframes;
   animation-duration: 1.2s;
@@ -249,11 +317,8 @@ footer .content a img {
   animation-fill-mode: forwards;
 }
 
-.topVideo .imageAnimation.is-animated,
-.topIcon1 .imageAnimation.is-animated,
-.topIcon2 .imageAnimation.is-animated, 
-.topIcon3 .imageAnimation.is-animated {
-  animation-delay: 3.0s; 
+.topVideo.imageAnimation.is-animated {
+  animation-delay: 2.5s; 
 }
 
 @keyframes imageFadeLeftkeyframes {
@@ -425,9 +490,10 @@ summary::-webkit-details-marker {
 
   /* トップキャラクター */
   .topCharacter{
-    margin-left: 40%;
-    width: 50%;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 97%, rgba(0, 0, 0, 0) 100%);
+    margin-left: 44%;
+    width: 48%;
+    margin-top: -50px;
   }
 
   /* トップメッセージ */
@@ -443,22 +509,22 @@ summary::-webkit-details-marker {
   /* トップアイコン */
   .topIcon1{
     position: absolute;
-    left: 20%;
-    top: 15%;
+    left: 13%;
+    top: 13%;
     width: 6%;
   }
   
   .topIcon2{
     position: absolute;
-    left: 40%;
-    top: 80%;
+    left: 42%;
+    top: 78%;
     width: 6%;
   }
 
   .topIcon3{
     position: absolute;
     left: 85%;
-    top: 35%;
+    top: 27%;
     width: 6%;
   }
 
@@ -467,7 +533,7 @@ summary::-webkit-details-marker {
     position: absolute;
     width: 50%;
     left: -3%;
-    top: 51%;
+    top: 47%;
     aspect-ratio: 16 / 9;
     scale: 50%;
   }
@@ -563,6 +629,11 @@ summary::-webkit-details-marker {
     left: 16px;
     transform: translateY(-6px) rotate(-45deg);
     width: 40%;
+  }
+
+  /* トップキャラクター */
+  .topCharacter{
+    overflow: visible;
   }
 
   /* トップメッセージ */

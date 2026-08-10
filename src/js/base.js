@@ -2,6 +2,8 @@ document.documentElement.style.overflow = "hidden";
 
 document.addEventListener('DOMContentLoaded', () => {
   setupSplitTextAnimation();
+  history.scrollRestoration = 'manual'
+  window.scrollTo(0, 0);
 });
 
 window.onload = function () {
