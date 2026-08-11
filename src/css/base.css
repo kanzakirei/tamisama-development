@@ -390,14 +390,13 @@ footer .content a img {
   color: #313131;
   transition: .3s ease-in-out;
   text-decoration: none;
-  font-weight: bold;
   border: 5px solid;
-  border-color: gray;
+  border-color: white;
   border-radius: 8px;
 }
 
 .linkButton:hover {
-  background-color: #FFF;
+  background-color: white;
 }
 
 .linkButton:after {
@@ -408,8 +407,8 @@ footer .content a img {
   transition: right .3s;
   width: 6px;
   height: 6px;
-  border-top: solid 5px gray;
-  border-right: solid 5px gray;
+  border-top: solid 5px white;
+  border-right: solid 5px white;
   transform: translateY(-50%) rotate(45deg);
 }
 
@@ -576,8 +575,18 @@ summary::-webkit-details-marker {
 
   /* アバウトキャラクター */
   .aboutCharacter{
-    width: 20%;
+    width: 19%;
     margin-left: 60%;
+  }
+
+  /* アバウトメッセージ */
+  .aboutMessage{
+    position: absolute;
+    width: 41%;
+    left: 19%;
+    top: 19%;
+    font-size: clamp(12px, 2vw, 99px);
+    text-align: left;
   }
 }
 
@@ -702,5 +711,10 @@ summary::-webkit-details-marker {
     overflow: visible;
     width: 45%;
     margin-left: 50%;
+  }
+
+  /* アバウトメッセージ */
+  .aboutMessage{
+    font-size: clamp(12px, 2.5vw, 99px);
   }
 }
