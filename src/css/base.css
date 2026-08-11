@@ -585,7 +585,7 @@ summary::-webkit-details-marker {
     width: 41%;
     left: 19%;
     top: 19%;
-    font-size: clamp(12px, 2vw, 99px);
+    font-size: 1.9vw;
     text-align: left;
   }
 }
@@ -715,6 +715,11 @@ summary::-webkit-details-marker {
 
   /* アバウトメッセージ */
   .aboutMessage{
-    font-size: clamp(12px, 2.5vw, 99px);
+    position: absolute;
+    width: 48%;
+    left: 7%;
+    top: 19%;
+    font-size: 3vw;
+    text-align: left;
   }
 }
