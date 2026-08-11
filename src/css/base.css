@@ -68,9 +68,9 @@ div.left {
 
 .line {
   width: 100%;
-  border-bottom: 2px solid #292929;
-  padding-top: 10px;
-  margin-bottom: 10px;
+  height: 2px;
+  background-color: #000;
+  margin: 2vw 0;
 }
 
 .horizontal li {
@@ -447,6 +447,17 @@ summary::-webkit-details-marker {
   text-shadow: 0 0 5px #ff005b, 0 0 10px #ff005b, 0 0 20px #ff005b, 0 0 40px #ff005b;
 }
 
+/* ネオンフレーム */
+.neonFrame {
+  overflow: hidden; 
+  border-radius: 1.2vw; 
+  box-shadow: 
+    0 0 5px #ff005b, 
+    0 0 10px #ff005b, 
+    0 0 20px #ff005b, 
+    0 0 40px #ff005b;
+}
+
 /* 画面サイズ別設定 */
 @media screen and (min-width: 955px) {
 
@@ -536,6 +547,7 @@ summary::-webkit-details-marker {
     top: 47%;
     aspect-ratio: 16 / 9;
     scale: 50%;
+    border: none; 
   }
 
   .topVideo iframe {
