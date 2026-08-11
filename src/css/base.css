@@ -78,9 +78,47 @@ div.left {
   padding: 0px 15px 30px;
 }
 
+.titleText {
+  font-size: clamp(12px, 5vw, 99px);
+}
+
 @font-face {
   font-family: 'APFont';
   src: url("../font/AP.ttf");
+}
+
+/* ネオンテキスト */
+.neonText {
+  color: #fff;
+  text-shadow: 0 0 5px #ff005b, 0 0 10px #ff005b, 0 0 20px #ff005b, 0 0 40px #ff005b;
+}
+
+/* ネオンフレーム */
+.neonFrame {
+  overflow: hidden; 
+  border-radius: 1.2vw; 
+  box-shadow: 
+    0 0 5px #ff005b, 
+    0 0 10px #ff005b, 
+    0 0 20px #ff005b, 
+    0 0 40px #ff005b;
+}
+
+/* プロフィール */
+/* アバウト */
+.profile,
+.about {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  display: inline-block;
+}
+
+.profile img,
+.about img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 /* コンテンツ */
@@ -99,6 +137,7 @@ div.left {
   height: 100%;
 }
 
+/* フッター */
 footer .content img {
   max-width: 400px;
   width: 100%;
@@ -108,19 +147,6 @@ footer .content img {
 footer .content a img {
   width: 20px;
   aspect-ratio: 1;
-}
-
-.profile {
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-  display: inline-block;
-}
-
-.profile img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 
 /* ロード画面 */
@@ -148,6 +174,7 @@ footer .content a img {
   height: auto;
 }
 
+/* フェードイン */
 .fadeIn {
   animation: fadeInAnime .3s ease 0s 1 normal forwards;
 }
@@ -164,6 +191,7 @@ footer .content a img {
   }
 }
 
+/* フェードアウト */
 .fadeOut {
   animation: fadeOutAnime .3s ease 0s 1 normal forwards;
 }
@@ -180,6 +208,7 @@ footer .content a img {
   }
 }
 
+/* フェードアップ */
 .fadeUp {
   animation-name: fadeUpAnime;
   animation-duration: 0.5s;
@@ -317,6 +346,13 @@ footer .content a img {
   animation-fill-mode: forwards;
 }
 
+.aboutCharacter.imageAnimation.is-animated {
+  animation-name: imageFadeLeftkeyframes;
+  animation-duration: 1.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
 .topVideo.imageAnimation.is-animated {
   animation-delay: 2.5s; 
 }
@@ -441,23 +477,6 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-/* ネオンテキスト */
-.neonText {
-  color: #fff;
-  text-shadow: 0 0 5px #ff005b, 0 0 10px #ff005b, 0 0 20px #ff005b, 0 0 40px #ff005b;
-}
-
-/* ネオンフレーム */
-.neonFrame {
-  overflow: hidden; 
-  border-radius: 1.2vw; 
-  box-shadow: 
-    0 0 5px #ff005b, 
-    0 0 10px #ff005b, 
-    0 0 20px #ff005b, 
-    0 0 40px #ff005b;
-}
-
 /* 画面サイズ別設定 */
 @media screen and (min-width: 955px) {
 
@@ -554,6 +573,12 @@ summary::-webkit-details-marker {
     width: 100%;
     height: 100%;
   }
+
+  /* アバウトキャラクター */
+  .aboutCharacter{
+    width: 20%;
+    margin-left: 60%;
+  }
 }
 
 /* 画面サイズ別設定 */
@@ -646,6 +671,7 @@ summary::-webkit-details-marker {
   /* トップキャラクター */
   .topCharacter{
     overflow: visible;
+    margin-top: -50px;
   }
 
   /* トップメッセージ */
@@ -669,5 +695,12 @@ summary::-webkit-details-marker {
   /* トップビデオ */
   .topVideo{
     display: none;
+  }
+
+  /* アバウトキャラクター */
+  .aboutCharacter{
+    overflow: visible;
+    width: 45%;
+    margin-left: 50%;
   }
 }
