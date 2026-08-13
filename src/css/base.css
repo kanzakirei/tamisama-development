@@ -121,6 +121,44 @@ div.left {
   height: 100%;
 }
 
+/* SNSパネル */
+.snsPanel {
+  display: inline-block;
+  position: relative;
+  width: 70%;
+  margin: 2%;
+}
+
+.snsImage1 {
+  overflow: visible;
+  position: absolute;
+  top: 6%;
+  left: -25%;
+  scale: 40%;
+}
+
+.snsImage2 {
+  overflow: visible;
+  position: absolute;
+  top: 6%;
+  left: 25%;
+  scale: 40%;
+}
+
+.snsText1 {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  font-size: clamp(12px, 4vw, 99px);
+}
+
+.snsText2 {
+  position: absolute;
+  top: 47%;
+  left: 25%;
+  font-size: clamp(12px, 5vw, 99px);
+}
+
 /* コンテンツ */
 .content {
   position: relative;
