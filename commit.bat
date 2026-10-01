@@ -1,4 +1,4 @@
-@eshi off
+@echo off
 
 set /P MESSAGE="メッセージを入力してください："
 git add .
