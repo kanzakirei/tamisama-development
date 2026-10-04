@@ -104,3 +104,32 @@ function setupSplitTextAnimation() {
     });
   });
 }
+
+async function getInitialToken() {
+  const url = 'https://thebase.in';
+  
+  // application/x-www-form-urlencoded 形式で送信するパラメータ
+  const params = new URLSearchParams({
+    grant_type: 'authorization_code', // 固定
+    client_id: '741721a812a0b703d066efdfd0923d67',
+    client_secret: '3be3fb6ec3fc5f73a18f71ac0ba31830',
+    code: '0191c22e1b7c0df0dcf8cd5f8706a673', 
+    redirect_uri: 'https://tamisama.ik-aqua.workers.dev/shop'
+  });
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: params.toString()
+    });
+
+    const data = await response.json();
+    console.log(data);
+    // 【重要】ここで返ってくる access_token と refresh_token をデータベース等に安全に保存します
+  } catch (error) {
+    console.error('トークン取得エラー:', error);
+  }
+}
