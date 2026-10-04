@@ -6,18 +6,25 @@
   <title>TAMISAMA OFFICIAL SHOP</title>
   <link type="text/css" rel="stylesheet" href="css/base.css">
   <style>
-  body { font-family: sans-serif; margin: 30px; background: #f4f7f6; }
-  h1 { color: #333; }
-  button { padding: 10px 20px; font-size: 16px; cursor: pointer; background: #008080; color: white; border: none; border-radius: 4px; }
-  button:hover { background: #006666; }
-  #result { margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
-  .item-card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
-  .item-card img { max-width: 100%; height: 150px; object-fit: cover; border-radius: 4px; }
-  .item-title { font-weight: bold; margin: 10px 0 5px 0; font-size: 14px; }
-  .item-price { color: #d9534f; font-size: 16px; font-weight: bold; }
-  .item-stock { font-size: 12px; color: #666; margin-top: 5px; }
-  .error { color: red; font-weight: bold; }
-</style>
+    /* 画面全体のデザイン */
+    body { font-family: sans-serif; margin: 30px; background: #f4f7f6; }
+    h1 { color: #333; }
+    
+    /* 取得ボタンのデザイン */
+    button { padding: 10px 20px; font-size: 16px; cursor: pointer; background: #008080; color: white; border: none; border-radius: 4px; }
+    button:hover { background: #006666; }
+    
+    /* 商品を並べるグリッド配置（タイル状に自動整列） */
+    #result { margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+    
+    /* 商品カード1枚ずつのデザイン */
+    .item-card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+    .item-card img { max-width: 100%; height: 150px; object-fit: cover; border-radius: 4px; }
+    .item-title { font-weight: bold; margin: 10px 0 5px 0; font-size: 14px; }
+    .item-price { color: #d9534f; font-size: 16px; font-weight: bold; }
+    .item-stock { font-size: 12px; color: #666; margin-top: 5px; }
+    .error { color: red; font-weight: bold; }
+  </style>
 </head>
 
 <body>
@@ -25,67 +32,12 @@
   </header>
   <main>
     <div class="content center">
-
       <h1>BASE 商品一覧 取得テスト</h1>
+      <!-- JavaScriptからクリックを検知するためのボタン -->
       <button id="fetch-btn">商品一覧を取得する</button>
 
+      <!-- 取得した商品カードがここに自動で追加されます -->
       <div id="result"></div>
-
-      <script>
-        // 【重要】先ほどPowerShellで取得した access_token をここに貼り付けてください
-        const ACCESS_TOKEN = '4d039fcba7b480afd2a84a0cfd86a5c2';
-
-        document.getElementById('fetch-btn').addEventListener('click', async () => {
-          const resultDiv = document.getElementById('result');
-          resultDiv.innerHTML = '読み込み中...';
-
-          // BASE API 商品一覧エンドポイント
-          const url = 'https://thebase.in';
-
-          try {
-            const response = await fetch(url, {
-              method: 'GET',
-              headers: {
-                'Authorization': `Bearer ${ACCESS_TOKEN}`,
-                'Content-Type': 'application/json'
-              }
-            });
-
-            if (!response.ok) {
-              throw new Error(`HTTPエラー! ステータス: ${response.status}`);
-            }
-
-            const data = await response.json();
-            resultDiv.innerHTML = ''; // クリア
-
-            if (!data.items || data.items.length === 0) {
-              resultDiv.innerHTML = '<p>商品が見つかりませんでした。</p>';
-              return;
-            }
-
-            // 商品一覧をループ処理して画面に表示
-            data.items.forEach(item => {
-              const card = document.createElement('div');
-              card.className = 'item-card';
-
-              // 画像URLの取得（一番最初の画像）
-              const imgUrl = item.image_url_1 || 'https://placeholder.com';
-
-              card.innerHTML = `
-                <img src="${imgUrl}" alt="${item.title}">
-                <div class="item-title">${item.title}</div>
-                <div class="item-price">¥${Number(item.price).toLocaleString()}</div>
-                <div class="item-stock">在庫: ${item.stock || '0'}</div>
-              `;
-              resultDiv.appendChild(card);
-            });
-
-          } catch (error) {
-            console.error('エラー詳細:', error);
-            resultDiv.innerHTML = `<p class="error">取得失敗: ${error.message}<br>※ブラウザのCORS制限、またはトークンの期限切れ（1時間）の可能性があります。詳細はデベロッパーツールのコンソールを確認してください。</p>`;
-          }
-        });
-      </script>
     </div>
   </main>
   <footer>
