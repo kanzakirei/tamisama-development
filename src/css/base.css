@@ -34,6 +34,7 @@ header a img {
 main {
   padding-top: 50px;
   background-color: #f49fe3;
+  position: relative;
 }
 
 footer {
@@ -771,4 +772,15 @@ summary::-webkit-details-marker {
     font-size: 3vw;
     text-align: left;
   }
+}
+
+.heart-background {
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/floating_blurry_heart_particles.svg");
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  pointer-events: none;
+  z-index: 0;
 }

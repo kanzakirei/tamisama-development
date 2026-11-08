@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <path id="heart" d="M0 18C-10 8-28-4-25-18-22-31-5-31 0-17 5-31 22-31 25-18 28-4 10 8 0 18Z" fill="none" stroke="#fff" stroke-width="2.2"/>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .particle{filter:url(#glow);opacity:.34;transform-box:fill-box;transform-origin:center;animation:rise var(--duration) linear var(--delay) infinite}
+      @keyframes rise{
+        0%{transform:translate(0,100px) rotate(-12deg);opacity:0}
+        12%{opacity:var(--alpha)}
+        50%{transform:translate(var(--sway),-420px) rotate(8deg)}
+        88%{opacity:var(--alpha)}
+        100%{transform:translate(0,-1050px) rotate(-10deg);opacity:0}
+      }
+      @media(prefers-reduced-motion:reduce){.particle{animation:none;opacity:.15}}
+    </style>
+  </defs>
+  <g transform="translate(70 100) scale(0.25)"><g class="particle" style="--duration:14s;--delay:-2s;--alpha:0.28;--sway:35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(260 240) scale(0.32)"><g class="particle" style="--duration:17s;--delay:-8s;--alpha:0.3;--sway:-40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(450 80) scale(0.22)"><g class="particle" style="--duration:12s;--delay:-5s;--alpha:0.24;--sway:45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(650 210) scale(0.3)"><g class="particle" style="--duration:16s;--delay:-11s;--alpha:0.28;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(850 110) scale(0.24)"><g class="particle" style="--duration:13s;--delay:-4s;--alpha:0.25;--sway:40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1050 260) scale(0.34)"><g class="particle" style="--duration:18s;--delay:-13s;--alpha:0.32;--sway:-45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1250 90) scale(0.23)"><g class="particle" style="--duration:15s;--delay:-7s;--alpha:0.26;--sway:35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1450 230) scale(0.31)"><g class="particle" style="--duration:12s;--delay:-10s;--alpha:0.29;--sway:-50px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1650 100) scale(0.25)"><g class="particle" style="--duration:17s;--delay:-3s;--alpha:0.25;--sway:40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1850 250) scale(0.3)"><g class="particle" style="--duration:14s;--delay:-12s;--alpha:0.28;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(160 400) scale(0.3)"><g class="particle" style="--duration:16s;--delay:-6s;--alpha:0.28;--sway:45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(350 550) scale(0.22)"><g class="particle" style="--duration:13s;--delay:-9s;--alpha:0.24;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(550 390) scale(0.35)"><g class="particle" style="--duration:18s;--delay:-1s;--alpha:0.32;--sway:50px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(750 570) scale(0.25)"><g class="particle" style="--duration:14s;--delay:-14s;--alpha:0.26;--sway:-40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(950 410) scale(0.29)"><g class="particle" style="--duration:12s;--delay:-5s;--alpha:0.27;--sway:35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1150 580) scale(0.33)"><g class="particle" style="--duration:17s;--delay:-11s;--alpha:0.31;--sway:-45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1350 400) scale(0.23)"><g class="particle" style="--duration:15s;--delay:-3s;--alpha:0.25;--sway:40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1550 560) scale(0.32)"><g class="particle" style="--duration:13s;--delay:-8s;--alpha:0.29;--sway:-50px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1750 390) scale(0.25)"><g class="particle" style="--duration:18s;--delay:-15s;--alpha:0.26;--sway:35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(70 760) scale(0.28)"><g class="particle" style="--duration:15s;--delay:-4s;--alpha:0.27;--sway:-40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(270 900) scale(0.34)"><g class="particle" style="--duration:12s;--delay:-10s;--alpha:0.3;--sway:45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(470 740) scale(0.23)"><g class="particle" style="--duration:17s;--delay:-7s;--alpha:0.25;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(670 940) scale(0.3)"><g class="particle" style="--duration:14s;--delay:-13s;--alpha:0.28;--sway:50px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(870 760) scale(0.25)"><g class="particle" style="--duration:16s;--delay:-2s;--alpha:0.26;--sway:-45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1070 920) scale(0.35)"><g class="particle" style="--duration:13s;--delay:-9s;--alpha:0.31;--sway:40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1270 740) scale(0.24)"><g class="particle" style="--duration:18s;--delay:-5s;--alpha:0.25;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1470 930) scale(0.31)"><g class="particle" style="--duration:15s;--delay:-12s;--alpha:0.29;--sway:45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1670 750) scale(0.23)"><g class="particle" style="--duration:12s;--delay:-6s;--alpha:0.24;--sway:-40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1870 910) scale(0.33)"><g class="particle" style="--duration:17s;--delay:-14s;--alpha:0.3;--sway:50px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(170 1050) scale(0.22)"><g class="particle" style="--duration:13s;--delay:-11s;--alpha:0.24;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(370 300) scale(0.24)"><g class="particle" style="--duration:16s;--delay:-4s;--alpha:0.25;--sway:40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(570 1050) scale(0.27)"><g class="particle" style="--duration:14s;--delay:-7s;--alpha:0.27;--sway:-45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(770 300) scale(0.22)"><g class="particle" style="--duration:18s;--delay:-12s;--alpha:0.23;--sway:35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(970 1050) scale(0.3)"><g class="particle" style="--duration:12s;--delay:-3s;--alpha:0.28;--sway:-40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1170 300) scale(0.25)"><g class="particle" style="--duration:15s;--delay:-9s;--alpha:0.26;--sway:45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1370 1050) scale(0.23)"><g class="particle" style="--duration:17s;--delay:-1s;--alpha:0.24;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1570 300) scale(0.29)"><g class="particle" style="--duration:13s;--delay:-15s;--alpha:0.28;--sway:50px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1770 1050) scale(0.24)"><g class="particle" style="--duration:16s;--delay:-6s;--alpha:0.25;--sway:-45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(100 550) scale(0.2)"><g class="particle" style="--duration:19s;--delay:-8s;--alpha:0.22;--sway:35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(480 180) scale(0.2)"><g class="particle" style="--duration:14s;--delay:-13s;--alpha:0.23;--sway:-40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(850 550) scale(0.21)"><g class="particle" style="--duration:16s;--delay:-5s;--alpha:0.23;--sway:45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1220 180) scale(0.2)"><g class="particle" style="--duration:12s;--delay:-10s;--alpha:0.22;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1590 550) scale(0.21)"><g class="particle" style="--duration:18s;--delay:-2s;--alpha:0.24;--sway:40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1900 180) scale(0.2)"><g class="particle" style="--duration:15s;--delay:-11s;--alpha:0.22;--sway:-45px"><use href="#heart" transform="scale(3)"/></g></g>
+
+  <!-- repeat-y用：下端から流入する継ぎ目補完パーティクル -->
+  <g transform="translate(70 1180) scale(0.25)"><g class="particle" style="--duration:14s;--delay:-2s;--alpha:0.28;--sway:35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(260 1320) scale(0.32)"><g class="particle" style="--duration:17s;--delay:-8s;--alpha:0.3;--sway:-40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(450 1160) scale(0.22)"><g class="particle" style="--duration:12s;--delay:-5s;--alpha:0.24;--sway:45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(650 1290) scale(0.3)"><g class="particle" style="--duration:16s;--delay:-11s;--alpha:0.28;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(850 1190) scale(0.24)"><g class="particle" style="--duration:13s;--delay:-4s;--alpha:0.25;--sway:40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1050 1340) scale(0.34)"><g class="particle" style="--duration:18s;--delay:-13s;--alpha:0.32;--sway:-45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1250 1170) scale(0.23)"><g class="particle" style="--duration:15s;--delay:-7s;--alpha:0.26;--sway:35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1450 1310) scale(0.31)"><g class="particle" style="--duration:12s;--delay:-10s;--alpha:0.29;--sway:-50px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1650 1180) scale(0.25)"><g class="particle" style="--duration:17s;--delay:-3s;--alpha:0.25;--sway:40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1850 1330) scale(0.3)"><g class="particle" style="--duration:14s;--delay:-12s;--alpha:0.28;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(160 1480) scale(0.3)"><g class="particle" style="--duration:16s;--delay:-6s;--alpha:0.28;--sway:45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(350 1630) scale(0.22)"><g class="particle" style="--duration:13s;--delay:-9s;--alpha:0.24;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(550 1470) scale(0.35)"><g class="particle" style="--duration:18s;--delay:-1s;--alpha:0.32;--sway:50px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(750 1650) scale(0.25)"><g class="particle" style="--duration:14s;--delay:-14s;--alpha:0.26;--sway:-40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(950 1490) scale(0.29)"><g class="particle" style="--duration:12s;--delay:-5s;--alpha:0.27;--sway:35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1150 1660) scale(0.33)"><g class="particle" style="--duration:17s;--delay:-11s;--alpha:0.31;--sway:-45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1350 1480) scale(0.23)"><g class="particle" style="--duration:15s;--delay:-3s;--alpha:0.25;--sway:40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1550 1640) scale(0.32)"><g class="particle" style="--duration:13s;--delay:-8s;--alpha:0.29;--sway:-50px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1750 1470) scale(0.25)"><g class="particle" style="--duration:18s;--delay:-15s;--alpha:0.26;--sway:35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(70 1840) scale(0.28)"><g class="particle" style="--duration:15s;--delay:-4s;--alpha:0.27;--sway:-40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(270 1980) scale(0.34)"><g class="particle" style="--duration:12s;--delay:-10s;--alpha:0.3;--sway:45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(470 1820) scale(0.23)"><g class="particle" style="--duration:17s;--delay:-7s;--alpha:0.25;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(670 2020) scale(0.3)"><g class="particle" style="--duration:14s;--delay:-13s;--alpha:0.28;--sway:50px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(870 1840) scale(0.25)"><g class="particle" style="--duration:16s;--delay:-2s;--alpha:0.26;--sway:-45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1070 2000) scale(0.35)"><g class="particle" style="--duration:13s;--delay:-9s;--alpha:0.31;--sway:40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1270 1820) scale(0.24)"><g class="particle" style="--duration:18s;--delay:-5s;--alpha:0.25;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1470 2010) scale(0.31)"><g class="particle" style="--duration:15s;--delay:-12s;--alpha:0.29;--sway:45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1670 1830) scale(0.23)"><g class="particle" style="--duration:12s;--delay:-6s;--alpha:0.24;--sway:-40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1870 1990) scale(0.33)"><g class="particle" style="--duration:17s;--delay:-14s;--alpha:0.3;--sway:50px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(170 2130) scale(0.22)"><g class="particle" style="--duration:13s;--delay:-11s;--alpha:0.24;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(370 1380) scale(0.24)"><g class="particle" style="--duration:16s;--delay:-4s;--alpha:0.25;--sway:40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(570 2130) scale(0.27)"><g class="particle" style="--duration:14s;--delay:-7s;--alpha:0.27;--sway:-45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(770 1380) scale(0.22)"><g class="particle" style="--duration:18s;--delay:-12s;--alpha:0.23;--sway:35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(970 2130) scale(0.3)"><g class="particle" style="--duration:12s;--delay:-3s;--alpha:0.28;--sway:-40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1170 1380) scale(0.25)"><g class="particle" style="--duration:15s;--delay:-9s;--alpha:0.26;--sway:45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1370 2130) scale(0.23)"><g class="particle" style="--duration:17s;--delay:-1s;--alpha:0.24;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1570 1380) scale(0.29)"><g class="particle" style="--duration:13s;--delay:-15s;--alpha:0.28;--sway:50px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1770 2130) scale(0.24)"><g class="particle" style="--duration:16s;--delay:-6s;--alpha:0.25;--sway:-45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(100 1630) scale(0.2)"><g class="particle" style="--duration:19s;--delay:-8s;--alpha:0.22;--sway:35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(480 1260) scale(0.2)"><g class="particle" style="--duration:14s;--delay:-13s;--alpha:0.23;--sway:-40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(850 1630) scale(0.21)"><g class="particle" style="--duration:16s;--delay:-5s;--alpha:0.23;--sway:45px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1220 1260) scale(0.2)"><g class="particle" style="--duration:12s;--delay:-10s;--alpha:0.22;--sway:-35px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1590 1630) scale(0.21)"><g class="particle" style="--duration:18s;--delay:-2s;--alpha:0.24;--sway:40px"><use href="#heart" transform="scale(3)"/></g></g>
+  <g transform="translate(1900 1260) scale(0.2)"><g class="particle" style="--duration:15s;--delay:-11s;--alpha:0.22;--sway:-45px"><use href="#heart" transform="scale(3)"/></g></g>
+</svg>
