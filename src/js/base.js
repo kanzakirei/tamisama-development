@@ -14,11 +14,14 @@ window.onload = function () {
 
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header');
+  const scrollGuide = document.querySelector('.scrollGuide');
   if(window.scrollY > 50){
     header.classList.add('scrolled')
+    scrollGuide.classList.add('scrolled')
   }
   else{
     header.classList.remove('scrolled');
+    scrollGuide.classList.remove('scrolled')
   }
 });
 

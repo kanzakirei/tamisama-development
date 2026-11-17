@@ -99,6 +99,29 @@ div.left {
   src: url("../font/AP.ttf");
 }
 
+/* スクロールガイド */
+.scrollGuide {
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.scrollGuide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.scrollGuide.scrolled {
+  opacity: 0;
+  transform: translateX(-50%) translateY(5%);
+}
+
 /* ネオンテキスト */
 .neonText {
   color: #fff;
@@ -574,6 +597,11 @@ summary::-webkit-details-marker {
     visibility: hidden;
   }
 
+  /* スクロールガイド */
+  .scrollGuide {
+      width: 20%;
+  }
+
   /* トップキャラクター */
   .topCharacter{
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 97%, rgba(0, 0, 0, 0) 100%);
@@ -732,6 +760,11 @@ summary::-webkit-details-marker {
     left: 16px;
     transform: translateY(-6px) rotate(-45deg);
     width: 40%;
+  }
+
+  /* スクロールガイド */
+  .scrollGuide {
+      width: 30%;
   }
 
   /* トップキャラクター */
