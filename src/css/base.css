@@ -40,7 +40,7 @@ header a img {
 }
 
 main {
-  /* padding-top: 50px; */
+  padding-top: 20px;
   background-color: #f49fe3;
   position: relative;
 }
@@ -104,7 +104,7 @@ div.left {
     position: fixed;
     bottom: 0px;
     left: 50%;
-    z-index: 1000;
+    z-index: 998;
     pointer-events: none;
     opacity: 1;
     transform: translateX(-50%) translateY(0%);
