@@ -1,3 +1,4 @@
+
 /* 共通 */
 * {
   margin: 0;
@@ -15,11 +16,9 @@ body {
 }
 
 header {
-  background-color: transparent;
-  box-shadow: 0 0 0px;
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: 60px;
   top: 0;
   right: 0;
   z-index: 30;
@@ -36,13 +35,13 @@ header.scrolled {
 header a img {
   width: auto;
   height: 100%;
-  aspect-ratio: 5/2;
+  aspect-ratio: 5 / 2;
 }
 
 main {
-  padding-top: 20px;
-  background-color: #f49fe3;
   position: relative;
+  background-color: #f49fe3;
+  top: 0;
 }
 
 footer {
@@ -83,7 +82,7 @@ div.left {
 
 .horizontal li {
   display: inline-block;
-  padding: 0px 15px 30px;
+  padding: 0 15px 30px;
 }
 
 .titleText {
@@ -101,20 +100,20 @@ div.left {
 
 /* スクロールガイド */
 .scrollGuide {
-    position: fixed;
-    bottom: 0px;
-    left: 50%;
-    z-index: 700;
-    pointer-events: none;
-    opacity: 1;
-    transform: translateX(-50%) translateY(0%);
-    transition: opacity 0.2s ease, transform 0.2s ease;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: 700;
+  pointer-events: none;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .scrollGuide img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .scrollGuide.scrolled {
@@ -130,23 +129,22 @@ div.left {
 
 /* ネオンフレーム */
 .neonFrame {
-  overflow: hidden; 
-  border-radius: 1.2vw; 
-  box-shadow: 
-    0 0 5px #ff005b, 
-    0 0 10px #ff005b, 
-    0 0 20px #ff005b, 
+  overflow: hidden;
+  border-radius: 1.2vw;
+  box-shadow:
+    0 0 5px #ff005b,
+    0 0 10px #ff005b,
+    0 0 20px #ff005b,
     0 0 40px #ff005b;
 }
 
-/* プロフィール */
-/* アバウト */
+/* プロフィール・アバウト */
 .profile,
 .about {
   position: relative;
-  margin: 0 auto;
-  width: 100%;
   display: inline-block;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .profile img,
@@ -158,18 +156,18 @@ div.left {
 
 /* SNSパネル */
 .snsPanel {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   width: 70%;
   margin: 2%;
 }
 
 .snsImage1,
 .snsImage2 {
-  overflow: visible;
   position: absolute;
   top: -5%;
   left: -25%;
+  overflow: visible;
   scale: 40%;
 }
 
@@ -192,10 +190,10 @@ div.left {
 /* コンテンツ */
 .content {
   position: relative;
-  padding: 10px 0;
-  margin: 0 auto;
   width: 90%;
   max-width: 1000px;
+  padding: 10px 0;
+  margin: 0 auto;
   z-index: 1;
 }
 
@@ -203,7 +201,7 @@ div.left {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  margin: 6% 0%;
+  margin: 6% 0;
 }
 
 .iframeContent {
@@ -219,8 +217,8 @@ div.left {
 
 /* フッター */
 footer .content img {
-  max-width: 400px;
   width: 100%;
+  max-width: 400px;
   aspect-ratio: 5/2;
 }
 
@@ -313,7 +311,7 @@ footer .content a img {
   animation-name: floating-x;
   animation-duration: 3.2s;
   animation-timing-function: ease-in-out;
-  animation-delay: calc(var(--delay) * 2.5s); 
+  animation-delay: calc(var(--delay) * 2.5s);
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
 }
@@ -322,6 +320,7 @@ footer .content a img {
   0% {
     transform: translateX(-7%) rotate(-3deg);
   }
+
   100% {
     transform: translateX(7) rotate(3deg);
   }
@@ -332,7 +331,7 @@ footer .content a img {
   animation-name: floating-y;
   animation-duration: 1.8s;
   animation-timing-function: ease-in-out;
-  animation-delay: calc(var(--delay) * 1.0s); 
+  animation-delay: calc(var(--delay) * 1.0s);
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
 }
@@ -341,6 +340,7 @@ footer .content a img {
   0% {
     transform: translateY(-7%) rotate(-3deg);
   }
+
   100% {
     transform: translateY(7%) rotate(3deg);
   }
@@ -356,16 +356,16 @@ footer .content a img {
   animation-name: splitTextfadeUpKeyframes;
   animation-duration: 0.4s;
   animation-timing-function: ease-out;
-  animation-delay: calc(var(--delay) * 0.02s); 
+  animation-delay: calc(var(--delay) * 0.02s);
   animation-fill-mode: forwards;
 }
 
 .topMessage .splitTextAnimation.is-animated span {
-  animation-delay: calc(0.5s + (var(--delay) * 0.02s)); 
+  animation-delay: calc(0.5s + (var(--delay) * 0.02s));
 }
 
 @keyframes splitTextfadeUpKeyframes {
-  from  {
+  from {
     opacity: 0;
     transform: translateY(20px);
   }
@@ -390,9 +390,9 @@ footer .content a img {
 }
 
 .topIcon1 .popUpAnimation.is-animated,
-.topIcon2 .popUpAnimation.is-animated, 
+.topIcon2 .popUpAnimation.is-animated,
 .topIcon3 .popUpAnimation.is-animated {
-  animation-delay: 2.0s; 
+  animation-delay: 2.0s;
 }
 
 @keyframes popIn {
@@ -400,6 +400,7 @@ footer .content a img {
     opacity: 0;
     transform: scale(0.5);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -419,7 +420,7 @@ footer .content a img {
 }
 
 .topCharacter.imageAnimation.is-animated {
-  animation-delay: 0.1s; 
+  animation-delay: 0.1s;
   animation-name: imageFadeLeftkeyframes;
   animation-duration: 1.2s;
   animation-timing-function: ease;
@@ -434,11 +435,11 @@ footer .content a img {
 }
 
 .topVideo.imageAnimation.is-animated {
-  animation-delay: 2.5s; 
+  animation-delay: 2.5s;
 }
 
 @keyframes imageFadeLeftkeyframes {
-  from  {
+  from {
     opacity: 0;
     transform: translateX(50px);
   }
@@ -450,7 +451,7 @@ footer .content a img {
 }
 
 @keyframes imageFadeUpkeyframes {
-  from  {
+  from {
     opacity: 0;
     transform: translateY(50px);
   }
@@ -470,8 +471,7 @@ footer .content a img {
   color: #313131;
   transition: .3s ease-in-out;
   text-decoration: none;
-  border: 4px solid;
-  border-color: white;
+  border: 4px solid white;
   border-radius: 24px;
 }
 
@@ -498,7 +498,7 @@ footer .content a img {
 
 /* 記事 */
 .article {
-  margin: 0px auto 0px;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
@@ -506,22 +506,20 @@ footer .content a img {
   padding-bottom: 6px;
   border-bottom: 1px solid #333;
   clear: both;
-  margin-right: 12px;
-  margin-left: 12px;
-  padding-top: 0px;
-  margin-top: 0px;
+  margin: 0 12px;
+  padding-top: 0;
 }
 
 .article-list {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
 .article-list li {
   border-bottom: 1px dotted #333;
-  padding: 8px 0px;
-  margin: 0px 12px;
+  padding: 8px 0;
+  margin: 0 12px;
 }
 
 .article-list li:last-child {
@@ -529,13 +527,13 @@ footer .content a img {
 }
 
 .article-list-date {
-  padding: 0px 8px;
-  color: #666666;
+  padding: 0 8px;
+  color: #666;
 }
 
 details[open] summary {
   border-bottom: 1px dotted #333;
-  margin: 0px 12px;
+  margin: 0 12px;
 }
 
 details summary::before {
@@ -559,22 +557,45 @@ summary::-webkit-details-marker {
 /* 画面サイズ別設定 */
 @media screen and (min-width: 955px) {
 
+  /* PC版はヘッダーサイズ分下げる */
+  main {
+    padding-top: 60px;
+  }
+
   /* ナビゲーション */
   #navigation {
     position: fixed;
-    right: 0;
-    width: 100%;
     top: 0;
-    text-align: center;
-    height: 50px;
+    left: 0;
+    width: 100%;
+    height: 60px;
     z-index: 800;
   }
 
+  #navigation ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    list-style: none;
+    height: 60px;
+    padding: 0;
+  }
+
   #navigation li {
-    display: inline-block;
-    text-align: left;
-    letter-spacing: -.001px;
-    margin: 11px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+  }
+
+  #navigation li img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
   }
 
   #navigation li a,
@@ -600,19 +621,18 @@ summary::-webkit-details-marker {
 
   /* スクロールガイド */
   .scrollGuide {
-      width: 20%;
+    width: 20%;
   }
 
   /* トップキャラクター */
-  .topCharacter{
+  .topCharacter {
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 97%, rgba(0, 0, 0, 0) 100%);
     margin-left: 44%;
     width: 48%;
-    margin-top: -50px;
   }
 
   /* トップメッセージ */
-  .topMessage{
+  .topMessage {
     position: absolute;
     width: 50%;
     left: 10%;
@@ -622,21 +642,21 @@ summary::-webkit-details-marker {
   }
 
   /* トップアイコン */
-  .topIcon1{
+  .topIcon1 {
     position: absolute;
     left: 13%;
     top: 13%;
     width: 6%;
   }
-  
-  .topIcon2{
+
+  .topIcon2 {
     position: absolute;
     left: 42%;
     top: 78%;
     width: 6%;
   }
 
-  .topIcon3{
+  .topIcon3 {
     position: absolute;
     left: 85%;
     top: 27%;
@@ -644,14 +664,14 @@ summary::-webkit-details-marker {
   }
 
   /* トップビデオ */
-  .topVideo{
+  .topVideo {
     position: absolute;
     width: 50%;
     left: -3%;
     top: 47%;
     aspect-ratio: 16 / 9;
     scale: 50%;
-    border: none; 
+    border: none;
   }
 
   .topVideo iframe {
@@ -660,13 +680,13 @@ summary::-webkit-details-marker {
   }
 
   /* アバウトキャラクター */
-  .aboutCharacter{
+  .aboutCharacter {
     width: 19%;
     margin-left: 60%;
   }
 
   /* アバウトメッセージ */
-  .aboutMessage{
+  .aboutMessage {
     position: absolute;
     width: 41%;
     left: 19%;
@@ -684,7 +704,7 @@ summary::-webkit-details-marker {
     position: fixed;
     right: 0;
     width: 100%;
-    top: 0px;
+    top: 0;
     padding-top: 50px;
     height: 100%;
     text-align: center;
@@ -694,11 +714,31 @@ summary::-webkit-details-marker {
     z-index: 800;
   }
 
+  #navigation ul {
+    display: grid;
+    grid-template-columns: repeat(2, 50px);
+    justify-content: center;
+    justify-items: center;
+    gap: 50px 100px;
+    width: fit-content;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  #navigation li img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+  }
+
   #navigation li {
-    display: inline-block;
-    letter-spacing: -.001px;
-    width: 30%;
-    margin-top: 60px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 50px auto 0;
   }
 
   #navigation li a,
@@ -711,12 +751,13 @@ summary::-webkit-details-marker {
     color: white;
   }
 
+  /* ナビゲーションボタン */
   .navigationButton {
     position: fixed;
     top: 0;
     right: 0;
-    height: 50px;
-    width: 50px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
     z-index: 900;
   }
@@ -725,34 +766,34 @@ summary::-webkit-details-marker {
     display: inline-block;
     transition: all .4s;
     position: absolute;
-    left: 14px;
+    left: 15px;
     height: 3px;
     border-radius: 2px;
-    width: 45%;
+    width: 30px;
     box-shadow: 0 0 2px;
   }
 
   .navigationButton span:nth-of-type(1) {
-    top: 15px;
+    top: 19px;
     z-index: 31;
     background-color: gray;
   }
 
   .navigationButton span:nth-of-type(2) {
-    top: 23px;
+    top: 27px;
     background-color: gray;
   }
 
   .navigationButton span:nth-of-type(3) {
-    top: 31px;
+    top: 35px;
     background-color: gray;
   }
 
   .navigationButton.active span:nth-of-type(1) {
-    top: 18px;
-    left: 16px;
+    top: 22px;
+    left: 15px;
     transform: translateY(6px) rotate(45deg);
-    width: 40%;
+    width: 30px;
   }
 
   .navigationButton.active span:nth-of-type(2) {
@@ -760,55 +801,44 @@ summary::-webkit-details-marker {
   }
 
   .navigationButton.active span:nth-of-type(3) {
-    top: 30px;
-    left: 16px;
+    top: 34px;
+    left: 15px;
     transform: translateY(-6px) rotate(-45deg);
-    width: 40%;
+    width: 30px;
   }
 
   /* スクロールガイド */
   .scrollGuide {
-      width: 50%;
+    width: 50%;
   }
 
   /* トップキャラクター */
-  .topCharacter{
+  .topCharacter {
     overflow: visible;
-    margin-top: -50px;
   }
 
   /* トップメッセージ */
-  .topMessage{
+  .topMessage {
     font-size: max(2.5vw, 12px);
   }
 
   /* トップアイコン */
-  .topIcon1{
-    display: none;
-  }
-
-  .topIcon2{
-    display: none;
-  }
-
-  .topIcon3{
-    display: none;
-  }
-
-  /* トップビデオ */
-  .topVideo{
+  .topIcon1,
+  .topIcon2,
+  .topIcon3,
+  .topVideo {
     display: none;
   }
 
   /* アバウトキャラクター */
-  .aboutCharacter{
+  .aboutCharacter {
     overflow: visible;
     width: 45%;
     margin-left: 50%;
   }
 
   /* アバウトメッセージ */
-  .aboutMessage{
+  .aboutMessage {
     position: absolute;
     width: 48%;
     left: 7%;

@@ -6,7 +6,7 @@ set "TARGET_DIR=src\img"
 
 for /r "%TARGET_DIR%" %%f in (*.png) do (
     echo 変換中: "%%f"
-    ffmpeg -loglevel error -n -i "%%f" -lossless 1 "%%~dpnf.webp"
+    ffmpeg -loglevel error -y -i "%%f" -lossless 1 "%%~dpnf.webp"
 )
 
 echo.
